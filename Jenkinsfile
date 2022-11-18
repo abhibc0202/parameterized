@@ -1,7 +1,6 @@
 pipeline {
-  agent none;
-       parameters {
-  booleanParam defaultValue: true, name: 'status'
+environment {
+  name = "abhishek"
 }
   stages {
     stage ('BUILD') {
