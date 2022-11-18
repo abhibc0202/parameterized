@@ -1,5 +1,5 @@
 pipeline {
-agen none;
+agent none;
   parameters {
   booleanParam defaultValue: true, name: 'status'
 }
