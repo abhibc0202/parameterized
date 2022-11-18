@@ -1,16 +1,5 @@
 pipeline {
 agent none;
- parameters {
-  string defaultValue: 'Abhishek', description: 'Choose your name', name: 'name'
-    }
-    stages {
-        stage ('parameter') {
-            steps {
-                echo "Hi ${name} . Welcome to Jenkins"
-            }
-        }
-    }
-
   stages {
     stage ('BUILD') {
       agent {
