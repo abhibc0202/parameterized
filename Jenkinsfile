@@ -1,5 +1,6 @@
 pipeline {
-parameters {
+agen none;
+  parameters {
   booleanParam defaultValue: true, name: 'status'
 }
   stages {
