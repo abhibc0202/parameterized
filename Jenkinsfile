@@ -1,10 +1,10 @@
 pipeline {
-  agent none; 
+  agent none;
+       parameters {
+  booleanParam defaultValue: true, name: 'status'
+}
   stages {
     stage ('BUILD') {
-      parameters {
-  credentials credentialType: 'com.cloudbees.plugins.credentials.impl.UsernamePasswordCredentialsImpl', defaultValue: '', description: 'user name with password', name: 'abhi', required: true
-}
       agent {
   label 'label1'
 }
