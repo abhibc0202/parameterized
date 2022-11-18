@@ -1,17 +1,22 @@
 pipeline {
 agent none;
-  parameters {
-  booleanParam defaultValue: true, name: 'status'
-}
+ parameters {
+  string defaultValue: 'Abhishek', description: 'Choose your name', name: 'name'
+    }
+    stages {
+        stage ('parameter') {
+            steps {
+                echo "Hi ${name} . Welcome to Jenkins"
+            }
+        }
+    }
+
   stages {
     stage ('BUILD') {
       agent {
   label 'label1'
 }
-           parameters {
-  string defaultValue: 'build', name: 'name of the stage'
-} 
-      steps {
+     steps {
         echo " this is build stage "
         git credentialsId: 'mysore', url: 'https://github.com/abhibc0202/java1.git'
       }
