@@ -8,10 +8,10 @@ agent none;
       agent {
   label 'label1'
 }
-      steps {
-        parameters {
+           parameters {
   string defaultValue: 'build', name: 'name of the stage'
-}
+} 
+      steps {
         echo " this is build stage "
         git credentialsId: 'mysore', url: 'https://github.com/abhibc0202/java1.git'
       }
