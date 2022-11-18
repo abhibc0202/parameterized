@@ -1,6 +1,6 @@
 pipeline {
-environment {
-  name = "abhishek"
+parameters {
+  booleanParam defaultValue: true, name: 'status'
 }
   stages {
     stage ('BUILD') {
